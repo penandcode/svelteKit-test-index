@@ -1,11 +1,11 @@
 <script>
   export let text = "Click Me";
-  export let selected = false;
+  export let selected;
   export let className = "employees";
 </script>
 
 <main>
-  <button class={className} style={`${selected ? "background:#81E6D9; border:1px solid #81E6D9" : "background:#FFF; border:1px solid #CBD5E0"}`}>
+  <button class={className} on:click style={`${selected ? "background:#81E6D9; border:1px solid #81E6D9" : "background:#FFF; border:1px solid #CBD5E0"}`}>
     <p style={`${selected ? "color:#E6FFFA" : "color: #319795"}`}>
       {text}
     </p>

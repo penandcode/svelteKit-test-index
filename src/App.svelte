@@ -4,6 +4,10 @@
   import Main from "./components/Main.svelte";
   let isVisible = false;
   function handleVisibilityChange(event) {
+    if (window.innerWidth <= 1400) {
+      isVisible = true;
+      return;
+    }
     if (event.detail.isButtonVisible) {
       isVisible = true;
     } else {
